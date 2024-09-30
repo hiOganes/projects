@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  background-color: rgb(212, 212, 212);
+  color: white;
+  text-align: center;
+  height: auto;
+  font: 1.6em arial;
+  padding: auto;
+}
+
+.complex_list {
+  background-color: rgb(172, 172, 172);
+  padding: 4px;
+}
+
+ul.complex_list {
+  display: flex;
+}
+
+.complex_list li {
+  font: 0.75em arial;
+  list-style: none;
+}
+
+.complex_list li a {
+  text-decoration: none;
+  margin: 20px;
+  color: #000000;
+}
+
+.complex_list li a:hover {
+  text-decoration: underline;
+  color: rgb(145, 145, 145);
+}

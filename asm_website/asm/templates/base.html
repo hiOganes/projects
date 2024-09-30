@@ -1,0 +1,22 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link type="text/css" href="{% static 'main_pages/css/styles.css' %}" rel="stylesheet" />
+</head>
+<body>
+  <div class="header">
+    <ul class="complex_list">
+      <li><a href="{% url 'home' %}"><img src="{% static 'main_pages/images/logo.png' %}" width="50px" height="50px"></a>
+      {% for elem in mainmenu %}
+        <li><a href="{% url elem.name_url %}">{{ elem.name }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% block content %}{% endblock %}
+</body>
+</html>

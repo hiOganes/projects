@@ -1,0 +1,40 @@
+{ 
+  "window.density.editorTabHeight": "compact", 
+  "workbench.activityBar.location": "top", 
+  "editor.tabSize": 4, 
+  "editor.minimap.enabled": false, 
+  "editor.fontSize": 14, 
+  "window.commandCenter": false, 
+  "editor.scrollbar.vertical": "hidden", 
+  "editor.scrollbar.horizontal": "hidden", 
+  "editor.folding": false, 
+  "editor.glyphMargin": false, 
+  "editor.cursorBlinking": "expand", 
+  "editor.cursorStyle": "line-thin", 
+  "editor.cursorSmoothCaretAnimation": "explicit", 
+  "editor.suggest.showIcons": true, 
+  "editor.quickSuggestions": { 
+    "other": false, 
+    "comments": false, 
+    "strings": false 
+  }, 
+  "sqltools.connections": [ 
+    { 
+      "mysqlOptions": { 
+        "authProtocol": "default", 
+        "enableSsl": "Disabled" 
+      }, 
+      "previewLimit": 50, 
+      "server": "localhost", 
+      "port": 3306, 
+      "driver": "MySQL", 
+      "name": "MySQL Local", 
+      "username": "root", 
+      "database": "hioganesdb", 
+      "password": "Di16ser-Piero03" 
+    } 
+  ], 
+  "python.REPL.enableREPLSmartSend": false, 
+  "python.testing.pytestEnabled": false, 
+  "python.testing.unittestEnabled": false 
+}

@@ -16,5 +16,5 @@ urlpatterns = [
         name='illustrations'
         ),
     path('cards/', views.CardsPage.as_view(), name='cards'),
-    path('animation/', views.AnimationPage.as_view(), name='animation'),
+    path('animations/', views.AnimationPage.as_view(), name='animations'),
 ]

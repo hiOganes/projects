@@ -27,4 +27,4 @@ class CardsPage(TemplateView):
     template_name = 'main_pages/cards.html'
 
 class AnimationPage(TemplateView):
-    template_name = 'main_pages/animation.html'
+    template_name = 'main_pages/animations.html'

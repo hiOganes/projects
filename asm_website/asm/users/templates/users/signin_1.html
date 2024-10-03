@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="../../static/users/css/signin_1.css">
+</head>
+
+<body>
+    <div class="container">
+        <form action="#" class="registration-form">
+            <h2>Sign Up</h2>
+            <div class="reg-item">
+                <input type="text" placeholder="Username" name="name" required>
+                <small class="hint">Enter a unique username (3-20 characters)</small>
+            </div>
+            <div class="reg-item">
+                <input type="email" placeholder="Email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                <small class="hint">Example: yourname@example.com</small>
+            </div>
+            <div class="reg-item">
+                <input type="password" placeholder="Password" minlength="8" maxlength="20" required>
+                <small class="hint">Password must be 8-20 characters long and contain at least one uppercase letter, one
+                    lowercase
+                    letter, and one number</small>
+            </div>
+            <div class="reg-item">
+                <input type="password" placeholder="Password" minlength="8" maxlength="20" required>
+                <small class="hint">Just enter the password one more time</small>
+            </div>
+            <button type="submit">Register</button>
+        </form>
+    </div>
+</body>
+
+</html>

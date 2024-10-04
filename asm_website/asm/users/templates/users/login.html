@@ -1,12 +1,60 @@
 {% extends "base.html" %}
+{% load static %}
+
+
+{% block css %}
+    <link rel="stylesheet" type="text/css" href={% static "users/css/login.css"%}>
+{% endblock %}
 
 {% block content %}
+    <div class="container">
+        <h2>Вход</h2>
+        <form method="post" class="login-form">
+            {% csrf_token %}
+            {% for f in form %}
+                <p><label class="login-form" for="{{ f.id_for_label }}">{{ f.label }}</label>{{ f }}</p>
+            {% endfor %}
+            <p><button type="submit">Войти</button></p>
+        </form>
+    </div>
+{% endblock %}
+
+
+{% comment %} {% extends 'base.html' %} {% endcomment %}
+
+{% comment %} {% block content %}
+<h1>Авторизация</h1>
+
+<form method="post">
+    {% csrf_token %}
+    <input type="hidden" name="next" value="{{ next }}" />
+    <div class="form-error">{{ form.non_field_errors }}</div>
+    {% for f in form %}
+    <p><label class="form-label" for="{{ f.id_for_label }}">{{ f.label }}</label>{{ f }}</p>
+    <div class="form-error">{{ f.errors }}</div>
+    {% endfor %}
+    <p><button type="submit">Войти</button></p>
+
+    <p><a href="{% url 'users:password_reset' %}">Забыли пароль?</a></p>
+</form>
+
+<hr>
+<p>
+    <a href="{% url 'social:begin' 'github' %}"><img src="/media/social-auth/github.png"></a>
+    <a href="{% url 'social:begin' 'vk-oauth2' %}"><img src="/media/social-auth/vk.png"></a>
+</p>
+
+{% endblock %} {% endcomment %}
+
+
+{% comment %} {% block content %}
 <div class="container">
-    <form class="login-form">
+    <form class="login-form" method="post">
+        {% csrf_token %}
         <h2>Login</h2>
         <input type="email" name="email" placeholder="Email" required>
         <input type="password" name="password" placeholder="Password" required>
         <button type="submit">Log In</button>
     </form>
 </div>
-{% endblock %}
+{% endblock %} {% endcomment %}

@@ -1,13 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base.html" %}
+{% load static %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration Form</title>
-    <link rel="stylesheet" href="../../static/users/css/signin_1.css">
-</head>
 
+{% block css %}
+    <link rel="stylesheet" type="text/css" href={% static "users/css/login.css"%}>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h2>Регистрация</h2>
+        <form method="post" class="login-form">
+            {% csrf_token %}
+            {% for f in form %}
+                <p><label class="login-form" for="{{ f.id_for_label }}">{{ f.label }}</label>{{ f }}</p>
+            {% endfor %}
+            <p><button type="submit">Зарегистрироваться</button></p>
+        </form>
+    </div>
+{% endblock %}
+
+
+
+{% comment %} 
 <body>
     <div class="container">
         <form action="#" class="registration-form">
@@ -33,6 +47,4 @@
             <button type="submit">Register</button>
         </form>
     </div>
-</body>
-
-</html>
+</body> {% endcomment %}

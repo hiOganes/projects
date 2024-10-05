@@ -13,6 +13,7 @@
             {% csrf_token %}
             {% for f in form %}
                 <p><label class="login-form" for="{{ f.id_for_label }}">{{ f.label }}</label>{{ f }}</p>
+                <div class="errors">{{ f.errors }}</div>
             {% endfor %}
             <p><button type="submit">Зарегистрироваться</button></p>
         </form>

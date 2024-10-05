@@ -17,9 +17,12 @@ class LoginUserView(LoginView):
 class RegisterUserView(CreateView):
     form_class = RegisterUserForm
     template_name = 'users/register.html'
-    success_url = reverse_lazy('users:login')
+    success_url = reverse_lazy('users:register_done')
 
 
 def logout_user(request):
     logout(request)
     return HttpResponseRedirect(reverse('home'))
+
+def register_done(request):
+    return render(request, 'users/register_done.html')

@@ -17,4 +17,5 @@ urlpatterns = [
         ),
     path('cards/', views.CardsPage.as_view(), name='cards'),
     path('animations/', views.AnimationPage.as_view(), name='animations'),
+    path('user_page/', views.UserPage.as_view(), name='user_page')
 ]

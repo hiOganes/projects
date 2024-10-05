@@ -52,7 +52,7 @@
           <li "nav-item"><a class="nav-link" href="{% url 'users:login' %}">Вход</a></li>
           <li "nav-item"><a class="nav-link" href="{% url 'users:register' %}">Регистрация</a></li>
         {% else %}
-        <li "nav-item"><a class="nav-link" href="{% url 'home' %}">{{ user.username }}</a></li>
+        <li "nav-item"><a class="nav-link" href="{% url 'user_page' %}">{{ user.username }}</a></li>
         <li "nav-item"><a class="nav-link" href="{% url 'users:logout' %}">Выход</a></li>
         {% endif %}
       </ul>

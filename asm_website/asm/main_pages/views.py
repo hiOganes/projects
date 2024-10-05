@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 
 class HomePage(TemplateView):
@@ -28,3 +29,6 @@ class CardsPage(TemplateView):
 
 class AnimationPage(TemplateView):
     template_name = 'main_pages/animations.html'
+
+class UserPage(LoginRequiredMixin, TemplateView):
+    template_name = 'main_pages/user_page.html'

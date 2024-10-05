@@ -6,7 +6,7 @@ from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
 class LoginUserForm(AuthenticationForm):
     username = forms.CharField(
         max_length=255,
-        widget=forms.TextInput(attrs={'class': 'container'}),
+        widget=forms.TextInput(attrs={'class': 'container',}),
         label='Логин'
         )
     password = forms.CharField(

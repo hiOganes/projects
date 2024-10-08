@@ -3,8 +3,10 @@
 
 
 {% block css %}
-    <link rel="stylesheet" type="text/css" href={% static "users/css/login.css"%}>
+    <link rel="stylesheet" type="text/css" href={% static "users/css/register.css"%}>
 {% endblock %}
+
+{% block title %}Регистрация{% endblock %}
 
 {% block content %}
     <div class="container">
@@ -12,7 +14,7 @@
         <form method="post" class="login-form">
             {% csrf_token %}
             {% for f in form %}
-                <p><label class="login-form" for="{{ f.id_for_label }}">{{ f.label }}</label>{{ f }}</p>
+                <p><label class="login-form" for="{{ f.id_for_label }}"></label>{{ f }}</p>
                 <div class="errors">{{ f.errors }}</div>
             {% endfor %}
             <p><button type="submit">Зарегистрироваться</button></p>

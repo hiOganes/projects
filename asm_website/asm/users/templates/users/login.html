@@ -6,13 +6,15 @@
     <link rel="stylesheet" type="text/css" href={% static "users/css/login.css"%}>
 {% endblock %}
 
+{% block title %}Вход{% endblock %}
+
 {% block content %}
     <div class="container">
         <h2>Вход</h2>
         <form method="post" class="login-form">
             {% csrf_token %}
             {% for f in form %}
-                <p><label class="login-form" for="{{ f.id_for_label }}">{{ f.label }}</label>{{ f }}</p>
+                <p><label class="login-form" for="{{ f.id_for_label }}"></label>{{ f }}</p>
             {% endfor %}
             <p><button type="submit">Войти</button></p>
         </form>

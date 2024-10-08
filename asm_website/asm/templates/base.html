@@ -10,7 +10,7 @@
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href={% static 'css/styles.css'%}>
   {% block css %}{% endblock %}
-  <title>Дырка годзилы</title>
+  <title>{% block title %}{% endblock %}</title>
 </head>
 
 <body>
@@ -50,9 +50,11 @@
         <ul class="checkin">
         {% if not user.is_authenticated %}
           <li "nav-item"><a class="nav-link" href="{% url 'users:login' %}">Вход</a></li>
+          <li "nav-item"><p class="nav-link">/</p></li>
           <li "nav-item"><a class="nav-link" href="{% url 'users:register' %}">Регистрация</a></li>
         {% else %}
         <li "nav-item"><a class="nav-link" href="{% url 'user_page' %}">{{ user.username }}</a></li>
+        <li "nav-item"><p class="nav-link">/</p></li>
         <li "nav-item"><a class="nav-link" href="{% url 'users:logout' %}">Выход</a></li>
         {% endif %}
       </ul>

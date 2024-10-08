@@ -6,12 +6,16 @@ from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
 class LoginUserForm(AuthenticationForm):
     username = forms.CharField(
         max_length=255,
-        widget=forms.TextInput(attrs={'class': 'container',}),
+        widget=forms.TextInput(
+            attrs={'class': 'container', 'placeholder': 'Логин'}
+            ),
         label='Логин'
         )
     password = forms.CharField(
         max_length=255,
-        widget=forms.PasswordInput(attrs={'class': 'container'}),
+        widget=forms.PasswordInput(attrs={
+            'class': 'container', 'placeholder': 'Пароль'}
+            ),
         label='Пароль'
         )
 
@@ -24,18 +28,24 @@ class LoginUserForm(AuthenticationForm):
 class RegisterUserForm(UserCreationForm):
     username = forms.CharField(
         max_length=255,
-        widget=forms.TextInput(attrs={'class': 'container'}),
-        label='Логин'
+        widget=forms.TextInput(
+            attrs={'class': 'container', 'placeholder': 'Логин'}
+            ),
+        label='Логин',
         )
     password1 = forms.CharField(
         max_length=255,
-        widget=forms.PasswordInput(attrs={'class': 'container'}),
-        label='Пароль'
+        widget=forms.PasswordInput(
+            attrs={'class': 'container', 'placeholder': 'Пароль'}
+            ),
+        label='Пароль',
         )
     password2 = forms.CharField(
         max_length=255,
-        widget=forms.PasswordInput(attrs={'class': 'container'}),
-        label='Повторите пароль'
+        widget=forms.PasswordInput(
+            attrs={'class': 'container', 'placeholder': 'Повторите пароль'}
+            ),
+        label='Повторите пароль',
         )
 
 
